@@ -60,7 +60,6 @@ class CatDelete(DeleteView):
 
 
 
-
 ########## USER ############
 
 def profile(request, username):
@@ -72,7 +71,7 @@ def profile(request, username):
 ########## CatToys ############
 
 def cattoys_index(request):
-    cattoys = CatToy.object.all()
+    cattoys = CatToy.objects.all()
     return render(request, 'cattoys/index.html', {'cattoys': cattoys})
 
 def cattoys_show(request, cattoy_id):
